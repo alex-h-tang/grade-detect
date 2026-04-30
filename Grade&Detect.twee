@@ -48,7 +48,7 @@ The administration hasn't changed the contract. It has, however, issued a statem
 
 Your department chair calls you in. He doesn't threaten you. He tells you, kindly, that your tenure case "will be a little more complicated this year." He says he's on your side. You believe him, partly.
 
-Aisha is still at Carolina. (if: $aishaOutcome is "accepted" or $aishaOutcome is "accepted-after-escalation")[The C+ stayed in her transcript. She's still on her scholarship, barely.](else:)[The A− you overrode to stuck. She's still on her scholarship.] The contract has two more years left.
+Aisha is still at UNC. (if: $aishaOutcome is "accepted" or $aishaOutcome is "accepted-after-escalation")[The C+ stayed in her transcript. She's still on her scholarship, barely.](else:)[The A- you overrode to stuck. She's still on her scholarship.] The contract has two more years left.
 ]
 (else-if: $endingTag is "stud-honest-punished")[
 ## Three months later.
@@ -89,7 +89,7 @@ You never told her it was you who signed the letter. You're not sure why.
 (else-if: $endingTag is "stud-silent-user")[
 ## Three months later.
 
-You graduated on time. You got the A−. You kept the scholarship. You never signed.
+You graduated on time. You got the A-. You kept the scholarship. You never signed.
 
 You still use ChatGPT for most of your writing. You've gotten better at disguising it. You sit down to write a birthday card to your sister and the cursor blinks for nine minutes before you open a new tab. You tell yourself it's not the same.
 
@@ -155,18 +155,18 @@ You stare at the essay for a long time. Grades are due Monday and you still have
 (set: $time to 14)
 (set: $credibility to 72)
 
-It's 8:14 PM, Sunday. Forty essays to finalize by 9 AM Monday. You've already worked through the first eighteen. GradeAssist has pre-scored each paper; your job is to "review and confirm." You've accepted eighteen in a row so far.
+It's 8:14 PM, Sunday. Forty essays to grade by 9 AM Monday. You've already worked through the first eighteen. GradeAssist has pre-scored each paper; your job is to "review and confirm." You've accepted eighteen in a row so far.
 
 You open essay nineteen. It's Aisha Al-Mansoori's.
 
 <div class="screen">
-''GradeAssist v4.2 · Essay Review''
+''GradeAssist v4.2 - Essay Review''
 
 Student: Al-Mansoori, Aisha (international, F-1 visa, 3rd-year)
 Prompt: "Is algorithmic governance compatible with democratic consent?"
 GradeAssist Score: (color: "#922")[C+ (76)]
 OriginalCheck: (color: "#922")[89% likely AI-generated]
-Flags: "Over-polished syntax," "atypical clause structure," "lexical density 2.3σ above cohort mean"
+Flags: "Over-polished syntax," "atypical clause structure," "lexical density 2.3 stdev above class mean"
 </div>
 
 You read the essay yourself. It's, in your honest judgment, the most thoughtful paper in the stack. Aisha’s essay examines how technological systems gain authority when the people affected by them do not fully understand how they work. She connects historical examples of computerized governance to broader questions about consent, transparency, and legitimacy. Her central question is whether a system can still be considered fair or democratic when its decision-making process remains opaque.
@@ -218,9 +218,9 @@ OriginalCheck: (color: "#262")[3% likely AI-generated]
 Flags: "Exemplary rubric compliance," "textbook five-paragraph structure"
 </div>
 
-You read it. The essay is competent. It hits every rubric box. It's also, unmistakably, AI-assisted. You know because Jordan came to office hours last week to ask what "epistemic humility" meant, and the phrase shows up twice in this paper. You know because AI has a very distinct way of writing. 
+You read it. The essay is competent. It hits every rubric box. It's also, unmistakably the work of ChatGPT or some other agent. You know because no one in the past decade has ever used the phrase "epistemic humility", yet they use it twice in this paper. Also, AI has a very distinct way of writing - most notably, a dozen or so em-dashes sprinkled throughout. 
 
-But both the institutional devices have cleared him.
+But both the institutional devices have cleared them.
 
 (link: "Accept. Without a flag, you have no defensible grounds.")[
 (set: $jordanOutcome to "passed")
@@ -248,9 +248,9 @@ But both the institutional devices have cleared him.
 
 
 :: ProfEssay3 {"position":"700,225","size":"100,100"}
-(if: $jordanOutcome is "passed")[You click ACCEPT & SUBMIT. Jordan gets the A−. His father is on the Board of Trustees. You have no evidence beyond a hunch. A hunch is not a policy.]
+(if: $jordanOutcome is "passed")[You click ACCEPT & SUBMIT. Jordan gets the A-. His father is on the Board of Trustees. You have no evidence beyond a hunch. A hunch is not a policy.]
 (else-if: $jordanOutcome is "downgraded")[You override to a C. You already know a reply from Vendor Relations will be in your inbox by Tuesday. They begin: //"Your recent override history suggests a calibration gap with the tool."//]
-(else-if: $jordanOutcome is "honor-court")[You fill out the honor referral form. Without OriginalCheck's corroboration, the referral is almost certain to be dismissed, and Jordan's father is, in fact, on the Board. You submit it anyway.]
+(else-if: $jordanOutcome is "honor-court")[You fill out the honor referral form. Without OriginalCheck's suuport, the referral is almost certain to be dismissed, and Jordan's father is, in fact, on the Board. You submit it anyway.]
 
 <div class="screen">
 ''GradeAssist v4.2 - Essay Review''
@@ -315,7 +315,7 @@ It's 3:12 AM. You're done.
 (else:)[
 (set: $endingTag to "prof-mixed")
 [[You sleep badly.->Epilogue]]
-]
+
 
 
 :: ProfGrind {"position":"700,100","size":"100,100"}
@@ -331,7 +331,7 @@ Time slips by, and you grade the next nineteen essays while zoning out. At first
 It's 1:47 AM. You've got six essays left. Your phone lights up.
 
 (if: $overrides >= 3)[[[Read the email from Vendor Relations->ProfVendor]]]
-(else:)[[[Finish grading->ProfFinish]]]
+(else:)[[[Finish grading->ProfFinish]]] 
 
 
 :: ProfVendor {"position":"850,100","size":"100,100"}
@@ -341,7 +341,7 @@ It's 1:47 AM. You've got six essays left. Your phone lights up.
 
 Dr. Chen,
 
-Our logging system flagged that your current override rate for the COMP380 grading batch is $overrides, placing you in the top quintile of faculty across the college.
+Our logging system flagged that your current override rate for the COMP380 grading batch is $overrides, placing you in the top percentile of faculty across the college.
 
 Per the GradeAssist Faculty Protocol, high override rates trigger a calibration review. A member of our team will reach out Monday to schedule a meeting to discuss "alignment between faculty assessments and tool outputs."
 
@@ -396,11 +396,11 @@ Consider AI from the position of a student with less power, where the choice to 
 
 # Grade & Detect 
 
-//An interactive work on AI, evaluation, and the people inside both.//
+// Our COMP380 Final Project: an interactive work examining AI, evaluation, and both sides of this complex situation.//
 
-Approximate playtime: 14-16 minutes · Two paths playable. 
+Approximate playtime: 14-16 minutes. There are two main playable paths, with several branching choices. 
 
-(text-style: "italic")[This project is a work of fiction. Characters, institutions, and tools named below are invented.]
+(text-style: "italic")[This story is a work of fiction. Any similarity to actual persons, living or dead, or actual events, or institutions, is purely coincidental.]
 
 [[Begin->Intro]]
 
@@ -428,9 +428,9 @@ Approximate playtime: 14-16 minutes · Two paths playable.
 (set: $time to 72)
 (set: $exhaustion to 2)
 
-It's 11:41 PM, Thursday. You've got three assignments due Monday: a Stats problem set, a lab report for your ML class, and a 1,500-word essay for COMP380 on algorithmic governance and democratic consent.
+It's 11:41 PM, Thursday. You've got three assignments due Monday: a STOR435 problem set, a lab report for your ML class, and a 1,500-word essay for COMP380 on algorithmic governance and democratic consent.
 
-You work a 7 AM shift at the library Friday morning. Your roommate Kenzie is on her bed with her laptop open, using ChatGPT Plus to draft her own COMP380 essay. She's offered, twice, to show you her workflow.
+You work a 7 AM shift at the library Friday morning. Your roommate Jordan is on their bed, with their laptop open, using ChatGPT to draft their own COMP380 essay. They've offered, twice, to show you the workflow.
 
 The syllabus says AI use is "strictly prohibited" and will be "referred to the Office of Academic Integrity without exception." The syllabus also says all essays will be screened by ''OriginalCheck''.
 
@@ -442,7 +442,7 @@ You sit down with the essay prompt open in one tab. In another tab, a ChatGPT lo
 (go-to: "StudentAssign2")
 ]
 
-(link: "Open ChatGPT. You can always not paste anything.")[
+(link: "Open ChatGPT. You can always not copy anything.")[
 (set: $time to it - 4)
 (set: $studentAction to "opened-chat")
 (go-to: "StudentAssign2")
@@ -458,7 +458,7 @@ The prompt is: //"Is algorithmic governance compatible with democratic consent?"
 
 You write for two hours and end up with 600 words. They aren't good 600 words.
 
-Kenzie pokes her head in. //"I got my grade back already. A minus. The AI thing flagged 0%."// She genuinely doesn't think she did anything wrong.
+Jordan pokes their head in. //"I got my grade back already. A minus. The AI thing flagged 0%."// They genuinely don't think they did anything wrong.
 
 You stare at your 600 words.
 
@@ -487,9 +487,9 @@ You stare at your 600 words.
 
 
 :: StudentAssign3 {"position":"550,350","size":"100,100"}
-(if: $grade1 is "honest")[You close the tab and write from 4 PM to 2 AM, stopping only for ramen and a phone call from your sister that you cut short. At 2:17 AM, you finish with 1,480 words. When you reread it, the essay feels honest, even if it is not the strongest one in the class. It says what you actually think.]
-(else-if: $grade1 is "hybrid")[You paste the prompt into ChatGPT and ask for an outline, then a skeleton, then a few sample topic sentences. You rewrite every line, cutting anything that sounds too much like the model, and add the story your grandmother told you last Thanksgiving about the rebate check she was denied. By midnight, the essay is finished at 1,520 words. Some of it feels like yours, and some of it does not, but the line between the two has become harder to see.]
-(else-if: $grade1 is "all-ai")[The essay takes twenty-seven minutes. You paste the prompt. You ask for 1,500 words. You ask it to "sound like a smart undergraduate." You read it and it's better than what you would've written, honestly. You change a few sentences. You swap "furthermore" for "also" in three places. 1,510 words. None of them yours. You've got most of the evening left. You watch a movie with Kenzie.]
+(if: $grade1 is "honest")[You close the tab and write from 4 PM to 2 AM, stopping only for ramen and a phone call from your sister that you cut short. At 2:17 AM, you finally finish. When you reread it, the essay feels honest, being the fruit of your labor, even if it's not perfect..]
+(else-if: $grade1 is "hybrid")[You paste the prompt into ChatGPT and ask for an outline, then a skeleton, then a few sample topic sentences. You rewrite every line, cutting anything that sounds too much like the model, and add a few anecdotes from your past. By midnight, the essay is finished. Some of it feels like yours, and some of it does not, but the line between the two has become harder to see, and blurred.]
+(else-if: $grade1 is "all-ai")[The essay takes twenty-seven minutes. You paste the prompt. You ask for 1,500 words. You ask it to "sound like a human, a CS undergrad." You read it and you feel it's better than what you would've written, to be honest. You change a few sentences. You swap "furthermore" for "also" in a few places, and change up the tempo of some sentences. It ends at 1,510 words. None of them are yours. You've got most of the evening left. You watch a movie with Jordan.]
 
 Sunday afternoon. The ML lab report is 8 pages of data analysis and a 500-word discussion.
 
@@ -497,12 +497,12 @@ Sunday afternoon. The ML lab report is 8 pages of data analysis and a 500-word d
 (set: $aiUsage to it + 1)
 (set: $time to it - 2)
 ]
-(else:)[You write the discussion yourself and it takes three hours.
+(else:)[You write the discussion yourself and it takes four hours.
 (set: $exhaustion to it + 1)
 (set: $time to it - 4)
 ]
 
-You submit all three assignments through the portal by 11:47 PM Sunday. An auto-reply: //"All essays will be screened by OriginalCheck within 48 hours."//
+You submit all three assignments through Canvas, just barely, by 11:47 PM on Sunday. There's an automatic reply: //"All essays will be screened by OriginalCheck within 48 hours."//
 
 You close the laptop and go to sleep.
 
@@ -510,7 +510,7 @@ You close the laptop and go to sleep.
 
 
 :: StudentLetter {"position":"800,350","size":"100,100"}
-(if: $aiUsage >= 2)[Kenzie forwards the letter to your phone. You read it at 2:47 AM in bed.]
+(if: $aiUsage >= 2)[Jordan forwards the letter to your phone. You read it at 2:47 AM in bed.]
 (else:)[You find the letter on the class GroupMe. It has been shared sixty-two times. Aisha wrote it herself. It is three paragraphs, then a list of signatures.]
 
 <div class="letter">
@@ -518,15 +518,15 @@ You close the laptop and go to sleep.
 
 My name is Aisha Al-Mansoori. I am a junior international student. English is my second language.
 
-Last week I turned in an essay on algorithmic governance. I wrote it myself. I revised it fourteen times. I read it out loud to my roommate to check the rhythm of the sentences, because in Arabic the rhythm of a sentence carries meaning that it does not carry in English, and I did not want to lose that.
+Last week I turned in an essay on algorithmic governance. I wrote it myself. I revised it several times. I read it out loud to my roommate to check if it sounded right.
 
 The tool flagged my essay as 89% likely AI-generated, and my professor called me in to explain. I showed her my drafts, and she believed me, but the flag was already in the system. So was the grade, and so was the override, recorded as an anomaly against her.
 
-What I want to say is this: the tool did not decide I cheated. It decided my sentences were too clean. Too clean, I think, for a student with my name, though the tool would not put it that way.
+What I want to say is this: the tool did not decide I cheated. It decided my sentences were too clean. Too clean, I think, for a student with my name and ethnicity.
 
-I am not the first. International students I know are being told, by friends who mean well, to "sound more casual," to "leave in mistakes on purpose." That is what you tell someone playing a rigged game.
+I am not the first. International students I know are being told, by friends who mean well, to "sound more casual," to "leave in mistakes on purpose." I am being told to reward imperfection in my writing.
 
-I do not want the tool calibrated. I want someone to ask whether a tool that punishes careful writing has any place in a university.
+I do not want the tool recalibrated. I want someone to ask whether a tool that punishes careful writing has any place in a university.
 
 If you used AI and were cleared, you are the reason I am asking. Please say so, even anonymously.
 
@@ -535,7 +535,7 @@ Aisha
 
 (if: $aiUsage >= 2)[You close the app and look at the ceiling. You think about the line //"the tool did not decide I cheated. It decided my sentences were too clean."//
 
-You think about Kenzie whose essay the tool didn't touch. You think about the A− sitting in your own gradebook. You think about the guilt you felt at first using AI and how it stopped Saturday afternoon unnoticeably.
+You think about Jordan whose essay the tool didn't touch. You think about the A- sitting in your own gradebook. You think about the guilt you felt at first using AI and how it stopped Saturday afternoon unnoticeably.
 
 The letter includes an anonymous free-text field at the bottom. It asks for feedback from someone directly affected by the system. 
 
@@ -545,7 +545,7 @@ The letter includes an anonymous free-text field at the bottom. It asks for feed
 (go-to: "Epilogue")
 ]
 
-(link: "Don't sign. Keep your A−. Get some sleep.")[
+(link: "Don't sign. Keep your A-. Get some sleep.")[
 (set: $endingTag to "stud-silent-user")
 (go-to: "Epilogue")
 ]
@@ -585,14 +585,14 @@ Dear Student,
 (else:)[Your recent submission has been ''flagged for review''. OriginalCheck identified a 71% likelihood of AI-generated content. You may either (a) accept a score of zero and a meeting with the Office of Academic Integrity, or (b) appeal the determination in writing within 72 hours.]
 </div>
 
-(if: $aiUsage >= 2)[You used AI for most of the essay and the tool cleared you. You got an A−.
+(if: $aiUsage >= 2)[You used AI for most of the essay and the tool cleared you. You got an A-.
 
-Kenzie shows you a text she got from a classmate: Aisha from your COMP380 section was flagged. Aisha wrote hers by hand.
+Jordan shows you a text they got from a classmate: Aisha from your COMP380 section was flagged. Aisha wrote hers by hand.
 
 <div class="thread">
-''Kenzie:'' did u see the thing going around
-''Kenzie:'' aisha got flagged. like wrote it herself and it flagged her
-''Kenzie:'' she's asking ppl to sign an open letter
+''Jordan:'' did u see the thing going around
+''Jordan:'' aisha got flagged. like wrote it herself and it flagged her
+''Jordan:'' she's asking ppl to sign an open letter
 ''You:'' 😭
 </div>
 
@@ -604,11 +604,11 @@ Kenzie shows you a text she got from a classmate: Aisha from your COMP380 sectio
 
 <div class="thread">
 ''You:'' i got flagged
-''Kenzie:'' wait fr
+''Jordan:'' wait fr
 ''You:'' yeah
-''Kenzie:'' are you going to appeal
-''Kenzie:'' btw there's a letter going around, some girl from ur section wrote it
-''Kenzie:'' same thing happened to her
+''Jordan:'' are you going to appeal
+''Jordan:'' btw there's a letter going around, some girl from ur section wrote it
+''Jordan:'' ts happened to her
 </div>
 
 [[Read the letter->StudentLetter]]
