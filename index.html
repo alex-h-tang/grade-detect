@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Grade &amp; Detect.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Grade &amp; Detect" startnode="11" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="8E7C1F2A-4B9E-4D2C-9F11-C9B8A0E7D3F2" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">html, body {
+<tw-storydata name="Grade &amp; Detect" startnode="11" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="8E7C1F2A-4B9E-4D2C-9F11-C9B8A0E7D3F2" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">html, body {
   background: #fafaf7;
   color: #222;
   margin: 0;
@@ -372,7 +372,7 @@ It&#39;s 3:12 AM. You&#39;re done.
 (else:)[
 (set: $endingTag to &quot;prof-mixed&quot;)
 [[You sleep badly.-&gt;Epilogue]]
-</tw-passagedata><tw-passagedata pid="8" name="ProfGrind" tags="" position="700,100" size="100,100">(if: $marcusOutcome is &quot;accepted&quot;)[You accept the D+. Marcus&#39;s scholarship requires a 3.0. This grade alone puts his semester GPA at 2.8. A second-year at 2.8 is a probation letter.]
+]</tw-passagedata><tw-passagedata pid="8" name="ProfGrind" tags="" position="700,100" size="100,100">(if: $marcusOutcome is &quot;accepted&quot;)[You accept the D+. Marcus&#39;s scholarship requires a 3.0. This grade alone puts his semester GPA at 2.8. A second-year at 2.8 is a probation letter.]
 (else-if: $marcusOutcome is &quot;overridden&quot;)[You override to B+. In the comment box: //&quot;Marcus, I like your essay&#39;s form. It&#39;s unconventional but works well. Great job!&quot;//]
 (else-if: $marcusOutcome is &quot;split&quot;)[You override to C+. It will not endanger his scholarship. It is not the grade he earned. You tell yourself this is triage.]
 
@@ -384,7 +384,7 @@ Time slips by, and you grade the next nineteen essays while zoning out. At first
 It&#39;s 1:47 AM. You&#39;ve got six essays left. Your phone lights up.
 
 (if: $overrides &gt;= 3)[[[Read the email from Vendor Relations-&gt;ProfVendor]]]
-(else:)[[[Finish grading-&gt;ProfFinish]]] </tw-passagedata><tw-passagedata pid="9" name="ProfVendor" tags="" position="850,100" size="100,100">&lt;div class=&quot;email&quot;&gt;
+(else:)[[[Finish grading-&gt;ProfFinish]]]</tw-passagedata><tw-passagedata pid="9" name="ProfVendor" tags="" position="850,100" size="100,100">&lt;div class=&quot;email&quot;&gt;
 &#39;&#39;From:&#39;&#39; vendor-relations@unc.edu
 &#39;&#39;Subject:&#39;&#39; Calibration Notice - COMP380
 
